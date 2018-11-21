@@ -1,0 +1,19 @@
+
+ {
+    "name": "WishPbHelper",
+    "description" : "Create Wish ProductBoot Helper",
+    "version": "1.0",
+    "manifest_version": 2,
+      "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": "hello_extensions.png"
+    },
+    "permissions" : ["tabs", "activeTab"], //向浏览器申请的权限
+
+    "content_scripts": [
+        {
+            "matches": ["https://china-merchant.wish.com/product-boost/edit/*","https://www.merchant.wish.com/product-boost/edit/*"],
+            "js": ["jquery.min.js","baidu.js"]
+        }
+    ]
+  }
